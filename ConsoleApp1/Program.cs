@@ -69,24 +69,25 @@ namespace ConsoleApp1
             Console.WriteLine("Площадь треугольника: " + S);
             Console.WriteLine("Периметр треугольника: " + P);
             Console.WriteLine("6 - й Номер");
-            var n = 1234;
+            Console.WriteLine("Введите число");
+            var n = int.Parse(Console.ReadLine());;
             var prod = 1;
             do prod *= n % 10;
             while ((n /= 10) > 0);
-            Console.WriteLine(prod);
+            Console.WriteLine("Ответ: " +prod);
             Console.WriteLine("7 - й Номер");
             Console.WriteLine("Введите число");
-            int g = int.Parse(Console.ReadLine());
-            Console.Write("{0} -> ", g);
-
-            int r = g % 10;
-            while ((g /= 10) != 0) r = r * 10 + g % 10;
-
-            Console.WriteLine("{0}", r);
+            int aa = int.Parse(Console.ReadLine());
+            string ss = aa.ToString();
+            char[] ar = ss.ToCharArray();
+            Array.Reverse(ar);
+            ss = new String(ar);
+            aa = Convert.ToInt32(ss);
+            Console.WriteLine("Ответ: "+ss);
             Console.WriteLine("8 - й Номер");
             Console.WriteLine("Введите x для неравенста 3x^4-5x^3+2x^2-x+7");
             int xx,l ; //l это решение этого многочлена
-            xx = 1; //Можно ввести любое X
+            xx = int.Parse(Console.ReadLine()); ; //Можно ввести любое X
             l = (((3 * xx - 5) * xx + 2) * xx - 1) * xx + 7; //По теореме Горнера можно свернуть в формулу где есть только 4 упножения и 4 сложения/вычитания
             Console.WriteLine("Ответ: " +l);
             Console.WriteLine("9 - й Номер");
